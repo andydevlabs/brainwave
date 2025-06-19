@@ -1,6 +1,6 @@
 import ButtonSVG from "../utils/svg/ButtonSvg";
 
-export default function Button({
+export default function ButtonComponent({
     className,
     href,
     isWhite,

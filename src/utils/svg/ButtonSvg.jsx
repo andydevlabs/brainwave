@@ -14,7 +14,7 @@ const ButtonSvg = ({ isWhite }) => (
             />
         </svg>
         <svg
-            className="absolute top-0 left-[1.3125rem] w-[calc(100%-2.625rem)]"
+            className="absolute top-0 left-[1.2rem] w-[calc(100%-2.420rem)]"
             height="44"
             viewBox="0 0 100 44"
             preserveAspectRatio="none"

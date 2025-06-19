@@ -1,7 +1,7 @@
 import { useLocation } from "react-router";
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
-import Button from "./Button";
+import ButtonComponent from "./ButtonComponent";
 import MenuSvg from "../utils/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
@@ -75,17 +75,17 @@ export default function Header() {
                     >
                         New Account
                     </a>
-                    <Button className="max-lg:hidden lg:flex" href="#login">
+                    <ButtonComponent className="max-lg:hidden lg:flex" href="#login">
                         Sign in
-                    </Button>
+                    </ButtonComponent>
 
-                    <Button
+                    <ButtonComponent
                         className="ml-auto lg:hidden"
                         px="px-3"
                         onClick={toggleNavigation}
                     >
                         <MenuSvg openNavigation={openNavigation} />
-                    </Button>
+                    </ButtonComponent>
                 </div>
             </div>
         </>
