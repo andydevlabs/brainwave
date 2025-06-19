@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <>
             <SectionComponent
-                className="pt-[12rem] -mt-[5.25]"
+                className="pt-[12rem] -mt-[5.25rem]"
                 crosses
                 crossesOffset="lg:translate-y-[5.25rem]"
                 customPaddings
@@ -45,7 +45,7 @@ export default function Hero() {
                                 <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                                     <img
                                         src={robot}
-                                        className="w-full"
+                                        className="w-full scale-[1.7] translate-y-[18%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                                         alt="AI"
                                         width={1024}
                                         height={490}
