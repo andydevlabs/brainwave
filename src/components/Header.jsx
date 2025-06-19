@@ -5,6 +5,8 @@ import Button from "./Button";
 import MenuSvg from "../utils/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
+import noScroll from "no-scroll";
+
 
 export default function Header() {
     const pathname = useLocation();
@@ -12,9 +14,16 @@ export default function Header() {
 
     const toggleNavigation = () => {
         setOpenNavigation((open) => !open);
+        if (openNavigation) {
+            noScroll.off();
+        } else {
+            noScroll.on();
+        }
     };
 
     const handleClick = () => {
+        if (!openNavigation) return;
+        noScroll.off()
         setOpenNavigation(false);
     };
 
