@@ -6,6 +6,8 @@ import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
+import Generating from "./Generating";
+import Notification from "./Notification";
 
 export default function Hero() {
     const parallaxRef = useRef(null);
@@ -22,9 +24,9 @@ export default function Hero() {
                 <div className="container relative" ref={parallaxRef}>
                     <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
                         <h1 className="h1 mb-6">
-                            Explore the possibilities of AI Chatting with
-                            Brainwave
-                            <span className="inline-block relative">
+                            Explore the Possibilities of &nbsp;AI&nbsp; Chatting
+                            with
+                            <span className="pl-2 inline-block relative">
                                 Brainwave{" "}
                                 <img
                                     src={curve}
@@ -57,6 +59,7 @@ export default function Hero() {
                                         height={490}
                                     />
 
+                                    <Generating className="absolute bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[21rem] md:-translate-x-1/2" />
                                     <ScrollParallax isAbsolutelyPositioned>
                                         <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
                                             {heroIcons.map((icon, index) => (
@@ -70,6 +73,9 @@ export default function Hero() {
                                                 </li>
                                             ))}
                                         </ul>
+                                    </ScrollParallax>
+                                    <ScrollParallax isAbsolutelyPositioned>
+                                        <Notification className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex" title="Code generation"/>
                                     </ScrollParallax>
                                 </div>
                             </div>
@@ -87,6 +93,7 @@ export default function Hero() {
                         <BackgroundCircles />
                     </div>
                 </div>
+                <BottomLine />
             </SectionComponent>
         </>
     );

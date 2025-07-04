@@ -1,4 +1,4 @@
-import SectionSvg from "../utils/svg/SectionSvg"
+import SectionSvg from "../utils/svg/SectionSvg";
 
 export default function SectionComponent({
     className,
@@ -12,12 +12,7 @@ export default function SectionComponent({
         <>
             <div
                 id={id}
-                className={`relative ${
-                    customPaddings ||
-                    `py-10 ${
-                        crosses ? "lg:py-32 xl:py-40" : "lg:py-16 xl:py-20"
-                    } ${className || ""} `
-                }`}
+                className={`relative ${customPaddings || `py-10 ${crosses ? "lg:py-32 xl:py-40" : "lg:py-16 xl:py-20"}`} ${className || ""}`}
             >
                 {children}
 
